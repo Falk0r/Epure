@@ -21,18 +21,18 @@ router.post('/',urlencodedParser, function(req, res) {
   const message = body.message;
 
   var transporter = nodemailer.createTransport({
-    host: 'SSL0.OVH.NET',
+    host: '',
     port: 465,
     secure: true,
     auth: {
-      user: 'contact@epure.io',
-      pass: 'AZqsnkl12!!'
+      user: 'o',
+      pass: ''
     }
   });
 
   var mailOptions = {
-    from: 'form@epure.io',
-    to: 'contact@epure.io',
+    from: '',
+    to: '',
     replyTo: email,
     subject: "Message envoyé du formulaire de contact, société : " + society,
     text: message,
