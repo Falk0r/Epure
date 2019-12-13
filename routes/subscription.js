@@ -22,7 +22,7 @@ router.post('/',urlencodedParser, function(req, res) {
   const mail = body.mail;
   console.log("le prénom est " + prenom);
 
-  axios.post('https://v2-api.sheety.co/98c650b7a10456361b4a41952403a398/subscriptionAlpha/feuille1', {
+  axios.post('', {
     feuille1: {
       prenom: prenom,
       nom: nom,
