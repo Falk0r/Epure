@@ -3,6 +3,7 @@ var router = express.Router();
 var bodyParser = require('body-parser'); // Charge le middleware de gestion des paramètres
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const nodemailer = require('nodemailer');
+const account = require('./account.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,18 +22,18 @@ router.post('/',urlencodedParser, function(req, res) {
   const message = body.message;
 
   var transporter = nodemailer.createTransport({
-    host: '',
-    port: 465,
+    host: account.host,
+    port: account.port,
     secure: true,
     auth: {
-      user: 'o',
-      pass: ''
+      user: account.user,
+      pass: account.pass
     }
   });
 
   var mailOptions = {
-    from: '',
-    to: '',
+    from: account.from,
+    to: account.user,
     replyTo: email,
     subject: "Message envoyé du formulaire de contact, société : " + society,
     text: message,
