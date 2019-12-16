@@ -20,6 +20,7 @@ router.post('/',urlencodedParser, function(req, res) {
   const society = body.society;
   const email = body.email;
   const message = body.message;
+  const phone = body.phone;
 
   var transporter = nodemailer.createTransport({
     host: account.host,
@@ -49,6 +50,7 @@ router.post('/',urlencodedParser, function(req, res) {
         <p>Prénom : ` + fname +`</p>
         <p>Nom : ` + lname +`</p>
         <p>Société : ` + society +`</p>
+        <p>Téléphone : ` + phone +`</p>
         <p>Email : ` + email +`</p>
         <hr>
         <h4>Message :</h4>

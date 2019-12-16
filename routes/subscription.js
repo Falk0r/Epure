@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const request = require('request');
-const axios = require('axios');
 const account = require('./account.js');
+const airtable = require('airtable');
+const base = new airtable({apiKey: account.airtableAPI}).base(account.airtableBase);
 
 var bodyParser = require('body-parser'); // Charge le middleware de gestion des paramètres
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -21,19 +22,29 @@ router.post('/',urlencodedParser, function(req, res) {
   const nom = body.nom;
   const societe = body.societe;
   const mail = body.mail;
+  const phone = body.phone;
   console.log("le prénom est " + prenom);
 
-  axios.post(account.sheety, {
-    feuille1: {
-      prenom: prenom,
-      nom: nom,
-      societe: societe,
-      mail: mail
+  base('Table 1').create([
+    {
+      "fields": {
+        "Name": prenom,
+        "Mail": mail,
+        "Society": societe,
+        "LName": nom,
+        "Phone": phone,
+        "State": "Non appelé, Non client"
+      }
     }
-  })
-  .catch(function(error) {
-    console.log(error);
+  ], function(err, records) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log("enregistrement effectué");
   });
+
+
 
 let send = true;
 res.render('subscription', {send: send});
