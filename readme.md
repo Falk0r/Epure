@@ -1,5 +1,7 @@
 
 # Epure.io
+
+lien du site : https://www.epure.io/
 ## Sideprojet
 
 Le concept est de proposer à des entreprises de gérer les accès, identifiants, mots de passe et applications disponibles pour chacun de leurs collaborateurs.
@@ -18,7 +20,7 @@ Le développement d'un front-end "maison" serait pertinent après un lancement d
 
 ## Formulaire d'inscription
 
-le formulaire d'inscription sur la page http://epure.io/subscription est connecté à un fichier Airtable via les lignes de code suivantes :
+le formulaire d'inscription sur la page https://www.epure.io/subscription est connecté à un fichier __Airtable__ via les lignes de code suivantes :
 
 ```javascript
 const airtable = require('airtable');
