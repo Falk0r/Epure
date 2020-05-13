@@ -52,7 +52,7 @@ const body = req.body;
     console.log("enregistrement effectué");
   });
   ```
-  On connecte notre formulaire à l'application __Airtable__ par API afin que les coordonnées soit directement accèssibles pour convenir d'un entretien téléphonique.
+  On connecte notre formulaire à l'application __Airtable__ par API afin que les coordonnées soit directement accessibles pour convenir d'un entretien téléphonique.
 
   ## Formulaire de contact
 
