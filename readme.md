@@ -10,7 +10,7 @@ Epure.io, en lien avec le chargé de projet ou l'informaticien de l'entreprise, 
 
 ## Concernant le développement de l'application web
 
-L'application est basé sur une architecture en NODE.js à l'aide du framework Express.js.
+L'application est basé sur une architecture en __NODE.js__ à l'aide du framework __Express.js__.
 
 Le front est articulé autour d'un template HTML Colorlib. Ce choix a été fait pour lancer le site le plus rapidement possible sans avoir à coder l'ensemble du visuel.
 
