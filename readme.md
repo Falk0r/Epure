@@ -8,7 +8,7 @@ Le concept est de proposer à des entreprises de gérer les accès, identifiants
 
 Le collaborateur s'identifie sur un portail web à l'aide d'une seule paire login/mot de passe, et accède automatiquement à ses applications qui lui sont affectés. L'accès aux applications et transparente pour le collaborateur, il n'a pas à ce soucier des logins et mot de passe associés.
 
-Epure.io, en lien avec le chargé de projet ou l'informaticien de l'entreprise, configure ensemble les solutions à dispositions des collaborateurs au cas par cas ou par groupes utilisateurs.
+Epure.io, en lien avec le chargé de projet ou l'informaticien de l'entreprise, configurent ensemble les solutions à dispositions des collaborateurs au cas par cas ou par groupes utilisateurs.
 
 ## Concernant le développement de l'application web
 
